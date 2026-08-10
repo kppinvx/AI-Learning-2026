@@ -39,9 +39,11 @@ Langchain consist of a large set of the pre-built components. Memory, Tools, RAG
 
 - LLMs are static brains that answers questions based on what it learned during training.
 - Agent has full autonomy with memory and tools to do whatever it thinks it needs to get the task done.
+- LLM prompting optimises for clarity, structure and tone.
+- Agent prompting optimises for decision making, tool selection, execution flows and constraints.
 - LLMs excel at responding to prompts in a general context, but struggle in a specific domain they were never trained on. Prompts are queries people use to seek responses from an LLM. For example, an LLM can provide an answer to how much a computer costs by providing an estimate. However, it can't list the price of a specific computer model that your company sells.
 
-​## What does Agent do?
+## What does Agent do?
 
 - Understand intent
 - Store the company's Knowledge in Vector DB
