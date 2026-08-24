@@ -1,15 +1,17 @@
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-flash-latest",
-    temperature=1
+llm = ChatOpenAI(
+    model="gpt-5.5",
+    temperature=1,
+    top_p=0.9,
+    max_completion_tokens=500
 )
 
-print("Gemini Chatbot")
+print("OpenAI Chatbot")
 print("Type 'exit' to quit\n")
 
 while True:
