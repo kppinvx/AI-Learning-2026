@@ -18,4 +18,4 @@ deactivate
 pip install --upgrade pip
 
 ## Install the packages
-pip install langchain langchain-google-genai langchain-groq langchain-mistralai python-dotenv
+pip install langchain langchain-google-genai langchain-groq langchain-mistralai python-dotenv langchain-community langchain-core langchain-ollama faiss-cpu

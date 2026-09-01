@@ -5,6 +5,9 @@ sudo apt install python3-full python3-venv
 ## Create a python virtual environment
 python3 -m venv venv
 
+## Copy Environment variables
+cp .env.example .env
+
 ## Activate it
 source venv/bin/activate
 
