@@ -15,6 +15,8 @@
     "@langchain/langgraph": "^1.4.14",
     "@langchain/mcp-adapters": "^1.1.4",
     "@langchain/mistralai": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "langchain": "^1.5.11",
     "zod": "^4.5.4"
   },
   "devDependencies": {

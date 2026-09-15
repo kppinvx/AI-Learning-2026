@@ -17,8 +17,7 @@ async function main() {
       command: "npx",
       args: [
         "-y",
-        "@modelcontextprotocol/server-sqlite",
-        "./sample.db"
+        "@modelcontextprotocol/server-memory"
       ]
     }
   });

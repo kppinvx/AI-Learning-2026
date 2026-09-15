@@ -1,8 +1,9 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { ChatMistralAI } from "@langchain/mistralai";
 import { createAgent } from "langchain";
 import { MultiServerMCPClient } from "@langchain/mcp-adapters";
-
-process.env.GOOGLE_API_KEY = "YOUR_GEMINI_API_KEY";
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function main() {
 
@@ -22,8 +23,7 @@ async function main() {
       command: "npx",
       args: [
         "-y",
-        "@modelcontextprotocol/server-sqlite",
-        "./sample.db"
+        "@modelcontextprotocol/server-memory"
       ]
     }
   });
@@ -31,9 +31,16 @@ async function main() {
   const tools = await client.getTools();
 
   const llm = new ChatGoogleGenerativeAI({
-    model: "gemini-2.5-flash",
+    apiKey: process.env.GOOGLE_API_KEY,
+    model: "gemini-3.6-flash",
     temperature: 0
   });
+
+  // const llm = new ChatMistralAI({
+  //   apiKey: process.env.MISTRAL_API_KEY,
+  //   model: "mistral-small-latest",
+  //   temperature: 0
+  // });
 
   const agent = createAgent({
     model: llm,
@@ -56,11 +63,3 @@ async function main() {
 }
 
 main();
-
-// import { ChatMistralAI } from "@langchain/mistralai";
-
-// const llm = new ChatMistralAI({
-//   apiKey: process.env.MISTRAL_API_KEY,
-//   model: "mistral-small-latest",
-//   temperature: 0
-// });
