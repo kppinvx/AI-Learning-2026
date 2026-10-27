@@ -65,8 +65,8 @@ async def main():
         )
 
         user_question = (
-            "Find employees who have AWS skills. "
-            "Tell me their names, roles and locations."
+            "Find employees who is skilled in Python. "
+            "Tell me their id, names, roles and locations."
         )
 
         print("\nUser:")
@@ -92,7 +92,7 @@ async def main():
         # --------------------------------------------------
 
         response = gemini.models.generate_content(
-            model="gemini-3.6-flash",
+            model="gemini-3.5-flash-lite",
             contents=contents,
             config=types.GenerateContentConfig(
                 tools=gemini_tools,
@@ -168,7 +168,7 @@ async def main():
         # --------------------------------------------------
 
         final_response = gemini.models.generate_content(
-            model="gemini-3.6-flash",
+            model="gemini-3.5-flash-lite",
             contents=contents,
             config=types.GenerateContentConfig(
                 tools=gemini_tools,

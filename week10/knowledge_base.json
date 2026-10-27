@@ -1,0 +1,18 @@
+[
+  {
+    "id": "refund-policy",
+    "text": "Refunds are available within 30 days of purchase. The customer must provide an order number. Approved refunds are returned to the original payment method."
+  },
+  {
+    "id": "shipping-policy",
+    "text": "Standard shipping usually takes 3 to 5 business days. Express shipping usually takes 1 to 2 business days. Delivery times are estimates and may vary by location."
+  },
+  {
+    "id": "warranty-policy",
+    "text": "Products include a 12-month limited warranty from the purchase date. The warranty covers manufacturing defects and excludes accidental damage."
+  },
+  {
+    "id": "support-hours",
+    "text": "Customer support is available Monday through Friday, 9 AM to 5 PM local time. Users can contact support using the help form in their account."
+  }
+]
